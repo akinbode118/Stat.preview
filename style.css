@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Navy-950: hsl(233, 47%, 7%);
+  --Blue-950: hsl(244, 37%, 16%);
+  --Purple-500: hsl(277, 64%, 61%);
+  --White-main: hsl(0, 0%, 100%);
+  --White-p: hsla(0, 0%, 100%, 0.75);
+  --White-stats: hsla(0, 0%, 100%, 0.6);
+  --Inter: "Inter", sans-serif;
+  --lexa: "Lexend Deca", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding: 50px 0;
+  background-color: var(--Navy-950);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Inter);
+}
+
+main {
+  width: 900px;
+  max-width: 90%;
+  background-color: var(--Blue-950);
+  display: flex;
+  border-radius: 8px;
+}
+
+.info {
+  width: 50%;
+  padding: 20px 48px 16px 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.content h1 {
+  font-size: 32px;
+  color: var(--White-main);
+}
+
+.content h1 span {
+  color: var(--Purple-500);
+}
+
+.content p {
+  color: var(--White-p);
+  font-size: 15px;
+  margin-top: 16px;
+  line-height: 150%;
+}
+
+.metrics {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 52px;
+}
+.numbers h3 {
+  color: var(--White-main);
+}
+
+.numbers p {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: var(--lexa);
+  color: var(--White-stats);
+  margin-top: 4px;
+}
+
+.image {
+  width: 50%;
+  background-color: hsl(277, 64%, 61%, 0.736);
+  border-radius: 0px 8px 8px 0px;
+  opacity: 0.5;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0px 8px 8px 0px;
+  mix-blend-mode: overlay;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column-reverse;
+    width: 500px;
+  }
+  .info,
+  .image {
+    width: 100%;
+  }
+
+  .image {
+    height: 350px;
+    border-radius: 8px 8px 0px 0px;
+  }
+  .image img {
+    border-radius: 8px 8px 0px 0px;
+  }
+
+  .info {
+    text-align: center;
+    align-items: center;
+    padding-bottom: 30px;
+    padding-top: 30px;
+  }
+
+  .metrics {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .image {
+    height: 270px;
+  }
+  .info {
+    padding: 30px 24px;
+  }
+  .content h1 {
+    font-size: 24px;
+  }
+  .content p {
+    font-size: 14px;
+  }
+  .metrics{
+    margin-top: 40px;
+  }
+  .numbers h3 {
+    font-size: 16px;
+  }
+  .numbers p {
+    font-size: 10px;
+  }
+}
